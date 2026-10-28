@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simulador de Investimentos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Simulador de Investimentos</h1>
+    <p class="aviso">Dinheiro fictício e preços simulados. Serve só para aprender e não é recomendação de investimento.</p>
+  </header>
+
+  <main>
+    <section class="resumo">
+      <div class="card"><span>Patrimônio total</span><strong id="patrimonio">R$ 0,00</strong></div>
+      <div class="card"><span>Saldo livre</span><strong id="saldo">R$ 0,00</strong></div>
+      <div class="card"><span>Resultado</span><strong id="resultado">R$ 0,00</strong></div>
+    </section>
+
+    <p id="msg" role="status"></p>
+
+    <section>
+      <h2>Evolução do patrimônio</h2>
+      <canvas id="grafico" width="800" height="220"></canvas>
+    </section>
+
+    <section>
+      <h2>Mercado</h2>
+      <p class="dica">Os preços mudam sozinhos a cada 3 segundos.</p>
+      <div class="tabela-wrap"><table id="mercado"></table></div>
+    </section>
+
+    <section>
+      <h2>Minha carteira</h2>
+      <div class="tabela-wrap"><table id="carteira"></table></div>
+    </section>
+
+    <section>
+      <h2>Últimas operações</h2>
+      <div class="tabela-wrap"><table id="historico"></table></div>
+    </section>
+
+    <section class="assistente">
+      <h2>Assistente</h2>
+      <div id="chat" aria-live="polite"></div>
+      <form id="formChat">
+        <input type="text" id="pergunta" placeholder="Pergunte: o que é diversificação?" autocomplete="off">
+        <button type="submit">Enviar</button>
+      </form>
+      <button type="button" id="analisar" class="secundario">Analisar minha carteira</button>
+    </section>
+
+    <button type="button" id="reiniciar" class="secundario">Recomeçar do zero</button>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
